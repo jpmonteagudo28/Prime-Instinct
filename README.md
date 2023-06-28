@@ -10,7 +10,7 @@ mathematician Eratosthenes of Cyrene around the 3rd century BCE.
 Eratosthenes was the third librarian at Alexandria and a scholar who, despite his contributions to various fields including mathematics, geography, and astronomy, fell short of the highest rank:
 
 ```         
-[Eratosthenes] was, indeed, recognised by his contemporaries as a man of great distinction in all branches of knowledge, though in each subject he just fell short of the highest place. On the latter ground he was called Beta, and another nickname applied to him, Pentathlos, has the same implication, representing as it does an all-round athlete who was not the first runner or wrestler but took the second prize in these contests as well as others.  
+[Eratosthenes] was, indeed, recognised by his contemporaries as a man of great distinction in all branches of knowledge,   though in each subject he just fell short of the highest place. On the latter ground he was called Beta, and another nickname applied to him, Pentathlos, has the same   implication, representing as it does an all-round athlete who was not the first runner or wrestler but took the second   prize in these contests as well as others.  
 ```
 
 Among his contributions to the sciences, he motivation behind Eratosthenes' development of the sieve algorithm
