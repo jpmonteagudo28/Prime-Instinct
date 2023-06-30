@@ -41,3 +41,9 @@ To this day, the Sieve of Eratosthenes remains one of the most well-known and wi
 
 
 ![*Factoring the Time*](https://imgs.xkcd.com/comics/factoring_the_time.png){width=53%}
+
+```
+{r echo=FALSE}
+library(knitr)
+knitr::kable(prp_num, caption = "Table containing weak probable primes")
+```
