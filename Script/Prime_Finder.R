@@ -97,7 +97,7 @@ factor_count <- function(num){
   if(num > 1e+15)
     stop("Argument must not be larger than 1e+15")
   if(num < 5 ||!num == round(num)|| num < 0||!length(num)==1)
-    stop("Argument must be nonnegative integer grater than five")
+    stop("Argument must be nonnegative integer greater than five")
   result <-factorize(num)
   encode <-rle(result)
   exponents <- ifelse(encode$lengths >=1,paste0(encode$values,"^",encode$lengths),result)
