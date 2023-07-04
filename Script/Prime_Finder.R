@@ -89,3 +89,20 @@ factorize <- function(limit){
     prime_factors <- c(prime_factors,limit)
   return(prime_factors)
 }
+##################################################################
+## E. Count all factors of any given integer
+##################################################################
+
+factor_count <- function(num){
+  if(num > 1e+15)
+    stop("Argument must not be larger than 1e+15")
+  if(num < 5 ||!num == round(num)|| num < 0||!length(num)==1)
+    stop("Argument must be nonnegative integer grater than five")
+  result <-factorize(num)
+  encode <-rle(result)
+  exponents <- ifelse(encode$lengths >=1,paste0(encode$values,"^",encode$lengths),result)
+  exp_val <-sapply(strsplit(exponents,"\\^"), function(i) as.numeric(i[2]))
+  addone_exp <- exp_val +1
+  factor_num <- prod(addone_exp)
+  return(factor_num)
+}
