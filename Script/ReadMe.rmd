@@ -1,0 +1,23 @@
+
+# README file
+
+This repo contains data, scripts and a README file.
+
+## Data
+
+The data for this repo was scraped from the [Prime Glossay](https://t5k.org/glossary/) site. The .txt file contains information on Charmichael numbers or probable primes (PRP) up to 500 for based 2 through 20 (binary through vigesimal).
+
+
+```{r echo=FALSE}
+setwd(C:/Users/jpmonteagudo/Desktop/R/Prime-Instinct)
+prp_num <- as.data.frame(read.delim("prp_number.txt",sep = "|", header = TRUE))
+knitr::kable(prp_num, caption = "Table containing weak probable primes")
+```
+
+## Scripts
+
+The `Scripts` file contains `R scripts` for prime sieve, Fermat's Little Theorem,prime factorization,prime counting functions;missing package function and a web scraper script.  
+The package used to generate these functions is the [`gmp` package](https://cran.r-project.org/web/packages/gmp/index.html). Additionally, the `rbenchmark` package was used to evaluate the sieve function in the global environment, replicating it 100 times. 
+
+The `Prime_Finder` script contains a `find_multiples` function which yields a list of multiples of a number up to the specified limit.
+
