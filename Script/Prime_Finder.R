@@ -94,7 +94,7 @@ factorize <- function(limit){
 ##################################################################
 
 factor_count <- function(num){
-  if(num > 1e+15)
+  if(num > 9e+15)
     stop("Argument must not be larger than 1e+15")
   if(num < 5 ||!num == round(num)|| num < 0||!length(num)==1)
     stop("Argument must be nonnegative integer greater than five")
@@ -105,4 +105,24 @@ factor_count <- function(num){
   addone_exp <- exp_val +1
   factor_num <- prod(addone_exp)
   return(factor_num)
+}
+
+#################################################################
+## F. Find factors of any given integer
+#################################################################
+
+alfactor <- function(limit){
+  if(limit >=9e+15)
+    stop("Argument must not be greater than 9e+15")
+  if(limit <= 5 ||!limit == round(limit)|| limit < 0||!length(limit)==1)
+    stop("Argument must be nonnegative integer greater than five")
+  vector <- 1:floor(sqrt(limit))
+  
+  prime_facts <- factorize(limit)
+  products <- outer(prime_facts,vector,"*")
+  factorz <- unique(c(products,prime_facts,vector))
+  facts <- which(limit%%factorz==0)
+  div <- limit/(factorz[facts])
+  factorz <-unique(c(factorz[facts],div))
+  return(sort(factorz))
 }
