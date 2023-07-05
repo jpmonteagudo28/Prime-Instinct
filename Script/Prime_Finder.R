@@ -116,8 +116,8 @@ alfactor <- function(limit){
     stop("Argument must not be greater than 9e+15")
   if(limit <= 5 ||!limit == round(limit)|| limit < 0||!length(limit)==1)
     stop("Argument must be nonnegative integer greater than five")
-  vector <- 1:floor(sqrt(limit))
   
+  vector <- 1:floor(sqrt(limit))
   prime_facts <- factorize(limit)
   products <- outer(prime_facts,vector,"*")
   factorz <- unique(c(products,prime_facts,vector))
