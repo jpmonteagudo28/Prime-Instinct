@@ -1,5 +1,5 @@
 ############################################################
-##.Problem 2.
+## Problem 2. Sum of the even-valued terms in Fibonacci seq.
 ############################################################
 
 library(gmp)
@@ -21,7 +21,7 @@ fibonacci <- function(limit){
 
 ##. Sum of all even numbers in Fibonacci up to 4e+6(n = 34)
 evenfib_sum <- function(limit){ ## I came upon n =34 by chance.
-                                ## I tested Fibonacci fun, and 
+                                ## I tested the Fibonacci func, and 
                                 ## realized the 35th term was over 4e+6
   vector <- c(0,1)
   for (i in 3:limit){
@@ -34,7 +34,8 @@ evenfib_sum <- function(limit){ ## I came upon n =34 by chance.
 }
 
 ############################################################
-## Problem 3. 
+## Problem 3. largest prime factor of 600851475143
+## (Use my Prime_Finder script).
 ############################################################
 
 factorize <- function(limit){
@@ -62,6 +63,42 @@ factorize <- function(limit){
 }
 
 ############################################################
-## Problem 4. 
+## Problem 4. Largest palindrome made from the product of two 
+## 3-digit numbers.
 ############################################################
+require(stringi)
+palindrome <- numeric()
+for (i in 100:999) {
+  for(j in 101:999){
+    result <- i*j
+    if (as.character(result) == stri_reverse(result)) {
+      palindrome <- c(palindrome, as.numeric(result))
+    }
+  }
+}
+max_pal <- max(palindrome)
+print(max_pal)
+
+
+#############################################################
+## Problem 5. Smallest (+) integer divisible by 1:20
+#############################################################
+
+divisor <- 2520 ## 2520 is divisible by 1:10, we can start here.
+while (sum(divisor %% (1:20)) != 0) {
+  divisor <- divisor + 2520 ## and add 2520 each time until div
+                            ## by 1:20
+}
+small_div <- divisor
+
+#############################################################
+## Problem 6. Sum Square Difference
+#############################################################
+
+ssqrdif <- function(limit) {
+  ssquare <- sum((1:limit)^2)
+  sum2 <- (sum(1:limit))^2
+  return(sum2 - ssquare)
+}
+
 
