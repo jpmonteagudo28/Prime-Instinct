@@ -5,14 +5,8 @@ This repo contains data, scripts and a README file.
 
 ## Data
 
-The data for this repo was scraped from the [Prime Glossay](https://t5k.org/glossary/) site. The .txt file contains information on Charmichael numbers or probable primes (PRP) up to 500 for based 2 through 20 (binary through vigesimal).
+The data for this repo was scraped from the [Prime Glossay](https://t5k.org/glossary/) site. The .txt file contains information on Carmichael numbers or probable primes (PRP) up to 500 for based 2 through 20 (binary through vigesimal).
 
-
-```{r echo=FALSE}
-setwd(C:/Users/jpmonteagudo/Desktop/R/Prime-Instinct)
-prp_num <- as.data.frame(read.delim("prp_number.txt",sep = "|", header = TRUE))
-knitr::kable(prp_num, caption = "Table containing weak probable primes")
-```
 
 ## Scripts
 
