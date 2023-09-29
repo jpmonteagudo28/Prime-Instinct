@@ -2,7 +2,7 @@
 # The Sieve of Eratosthenes
 
 ![*AI-generated rendering of Eratosthenes
-sieve*](file:///C:/Users/jpmonteagudo/Downloads/Eratosthenes.png)
+sieve*](https://github.com/jpmonteagudo28/Prime-Instinct/blob/main/Eratosthenes.png)
 
 The Sieve of Eratosthenes is an ancient algorithm devised by the Greek
 mathematician Eratosthenes of Cyrene around the 3rd century BCE.
